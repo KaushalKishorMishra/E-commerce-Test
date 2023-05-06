@@ -10,16 +10,18 @@ const Header = () => {
                 <Grid container>
                     <Grid item sm={6}>
                         <Box sx={{ pt: 0, mt: 0 }}>
-                            <Typography align="left" sx={{ pt: 0, mt: 0 }} textAlign={"left"}>
+                            <Typography align="left" sx={{ pt: 0, mt: 0 }} textAlign={"left"} className='cursive-font'>
                                 Want Help Contact us?{" "}
-                                {ContactNo}
+                                <span>
+                                    {ContactNo}
+                                </span>
                             </Typography>
                         </Box>
                     </Grid>
                     <Grid item sm={6} sx={{ display: "flex-end" }}>
                         <Box sx={{ pt: 0, mt: 0 }}>
                             <Typography align="left" sx={{ pt: 0, mt: 0 }} textAlign={"right"}>
-                               
+
                             </Typography>
                         </Box>
                     </Grid>

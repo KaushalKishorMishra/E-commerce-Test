@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Header'
 import Navbar from '../Navbar'
 import MCard from '../Card'
+import NCard from '../newcard/NewCard'
 import { Box } from '@mui/material'
 
 // image import 
@@ -18,7 +19,7 @@ const HomePage = () => {
                 {
                     Items.map((item, index) => {
                         return (
-                            <MCard key={index} title={item.title} description={item.description} image={item.image} />
+                            <NCard key={index} title={item.title} description={item.description} img={item.image} />
                         )
                     }
                     )

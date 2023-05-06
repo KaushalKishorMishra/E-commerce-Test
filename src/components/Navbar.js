@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: "" }}>
+        <AppBar position="static" sx={{ backgroundColor: "black" }}>
             <Container maxWidth="xl" fixed>
                 <Toolbar disableGutters>
                     <Typography
@@ -54,6 +54,7 @@ function ResponsiveAppBar() {
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
+                        className='cursive-font'
                     >
                         E-commerce
                     </Typography>
@@ -109,6 +110,7 @@ function ResponsiveAppBar() {
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
+                        className='cursive-font'
                     >
                         E-commerce
                     </Typography>
@@ -124,8 +126,8 @@ function ResponsiveAppBar() {
                         ))}
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
-                        <Button variant='contained' sx={{ backgroundColor: "white", color: 'black', mx: 2 }}>Tokens Left: {7000}</Button>
+                    <Box sx={{ flexGrow: 0, display: "flex", alignItems: "center" }}>
+                        <Button class="btn" href="hello">Token Left: {7000}</Button>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />

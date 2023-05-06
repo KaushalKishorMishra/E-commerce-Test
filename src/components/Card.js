@@ -6,27 +6,35 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import blackTshirt from "../assets/images/blank-black-t-shirt-hanger-isolated-white-background.jpg"
+import { ButtonGroup } from '@mui/material';
+
 export default function MCard(props) {
-    console.log(props.image)
     return (
         <>
-            <Card sx={{ minWidth: 300 }}>
+            <Card sx={{
+                minWidth: 300, backgroundColor: "black"
+            }}>
                 <CardMedia
                     sx={{ height: 140 }}
-                    image={props.image}
+                    image={blackTshirt}
                     title={props.title}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" color="white">
                         {props.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="white">
                         {props.description}
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Buy With Token</Button>
-                    <Button size="small">Buy With Cash</Button>
+                    <ButtonGroup>
+                        <Button size="small" variant='contained' sx={{
+                            backgroundColor: "white", color: "black", outline: "1px solid white", "&:hover": { backgroundColor: "black", color: "white" }
+                        }}>Buy With Token</Button>
+                        <Button size="small" sx={{ outline: "1px solid white", color: "white", "&:hover": { backgroundColor: "white", color: "black" } }}>Buy With Cash</Button>
+                    </ButtonGroup>
                 </CardActions>
             </Card>
         </>
